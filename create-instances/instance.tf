@@ -18,7 +18,7 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.medium"
   count = 3
-  vpc_security_group_ids = aws_security_group.allow_tls.id
+  vpc_security_group_ids = [aws_security_group.allow_tls.id]
   key_name = "my-laptop-key"
 
   tags = {
@@ -28,4 +28,8 @@ resource "aws_instance" "web" {
       "worker-2"
     ][count.index]
   }
+}
+
+output ec2_ip {
+    value = aws_instance.web[*].public_ip
 }
