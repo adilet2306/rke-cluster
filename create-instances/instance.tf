@@ -20,6 +20,7 @@ resource "aws_instance" "web" {
   count = 3
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
   key_name = "my-laptop-key"
+  user_data = file("script.sh")
 
   tags = {
     Name = [
