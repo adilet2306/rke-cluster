@@ -2,7 +2,7 @@ terraform {
   required_providers {
     rke = {
       source = "rancher/rke"
-      version = ">= 1.0.0"  # Adjust the version to your needs
+      version = ">= 1.0.0"
     }
   }
 }
