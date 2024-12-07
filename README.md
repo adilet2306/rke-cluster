@@ -21,7 +21,3 @@
 - **Replacing `<master-instance-ip>` and `<worker-1-ip>`, `<worker-2-ip>`**: Make sure to replace these placeholders with the actual IP addresses of your instances after running `terraform apply` in the `instance` folder.
   
 - **Cleaning up resources**: After you're done, remember to clean up resources using `terraform destroy` to avoid any unnecessary charges.
-
-This `README.md` should help guide you through the steps to prepare your environment, deploy the cluster, and deploy your application.
-
-Let me know if you need any changes or further details!
